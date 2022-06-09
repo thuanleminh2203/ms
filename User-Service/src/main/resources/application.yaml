@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: user-service
+  main:
+    allow-bean-definition-overriding: true
+  data:
+    mongodb:
+      auto-index-creation: true
+      database: vetc_dev
+      uri: mongodb://vetc:yns3rG4Q8npfYQJE@207.46.234.134:27717/vetc_dev
+server:
+  port: 8084
+  servlet:
+    context-path: /user
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka
