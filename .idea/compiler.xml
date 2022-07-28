@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Common-Service" />
+        <module name="Image-Service" />
+        <module name="Eureka-Server" />
+        <module name="Gateway-Service" />
+        <module name="Authentice-Service" />
+        <module name="Gallery-Service" />
+        <module name="User-Service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Authentice-Service" target="11" />
+      <module name="Common-Service" target="11" />
+      <module name="Eureka-Server" target="11" />
+      <module name="Gallery-Service" target="11" />
+      <module name="Gateway-Service" target="11" />
+      <module name="Image-Service" target="11" />
+      <module name="User-Service" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Authentice-Service" options="-parameters" />
+      <module name="Common-Service" options="-parameters" />
+      <module name="Eureka-Server" options="-parameters" />
+      <module name="Gallery-Service" options="-parameters" />
+      <module name="Gateway-Service" options="-parameters" />
+      <module name="Image-Service" options="-parameters" />
+      <module name="User-Service" options="-parameters" />
+    </option>
+  </component>
+</project>

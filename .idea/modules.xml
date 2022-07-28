@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Authenticate-Service/Authentice-Service.iml" filepath="$PROJECT_DIR$/Authenticate-Service/Authentice-Service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Common-Service/Common-Service.iml" filepath="$PROJECT_DIR$/Common-Service/Common-Service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Eureka-Server/Eureka-Server.iml" filepath="$PROJECT_DIR$/Eureka-Server/Eureka-Server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Gallery-Service/Gallery-Service.iml" filepath="$PROJECT_DIR$/Gallery-Service/Gallery-Service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Gateway-Service/Gateway-Service.iml" filepath="$PROJECT_DIR$/Gateway-Service/Gateway-Service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Image-Service/Image-Service.iml" filepath="$PROJECT_DIR$/Image-Service/Image-Service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/User-Service/User-Service.iml" filepath="$PROJECT_DIR$/User-Service/User-Service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ms.iml" filepath="$PROJECT_DIR$/.idea/ms.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,6 +1,6 @@
 package com.selex.motor.service;
 
-import com.selex.motor.comon.config.UserInfo;
+import com.selex.motor.comon.config.AuthInfo;
 import com.selex.motor.entity.UserEntity;
 import com.selex.motor.repository.UserRepository;
 import lombok.AllArgsConstructor;
@@ -25,12 +25,12 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) {
 
         UserEntity entity = userRepository.findByUsername(username).orElseThrow();
-        UserInfo userInfo = new UserInfo();
-        userInfo.setUsername(entity.getUsername());
+        AuthInfo authInfo = new AuthInfo();
+        authInfo.setUsername(entity.getUsername());
         List<GrantedAuthority> authorities = entity.getRoles().stream().map(k -> new SimpleGrantedAuthority(k)).collect(Collectors.toList());
-        userInfo.setAuthorities(authorities);
+        authInfo.setAuthorities(authorities);
 
-        return userInfo;
+        return authInfo;
     }
 
 
