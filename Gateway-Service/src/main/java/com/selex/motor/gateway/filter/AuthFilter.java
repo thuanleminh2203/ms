@@ -52,7 +52,7 @@ public class AuthFilter extends AbstractGatewayFilterFactory<AuthFilter.Config> 
 
             if (isSecured.test(request)) {
                 return webClientBuilder.build().get()
-                        .uri("lb://auth/api/login")
+                        .uri("lb://auth-service/auth/api/info")
                         .header(AppConstants.AUTHORIZATION, bearerToken)
                         .retrieve().bodyToMono(AuthDTO.class)
                         .map(response -> {

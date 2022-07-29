@@ -3,6 +3,7 @@ package com.selex.motor.AuthenticeService.service;
 import com.selex.motor.AuthenticeService.payload.request.AuthRequest;
 import com.selex.motor.AuthenticeService.payload.response.AuthResponse;
 import com.selex.motor.comon.config.AuthInfo;
+import com.selex.motor.comon.constant.AppConstants;
 import com.selex.motor.comon.exception.BadRequestException;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
@@ -36,10 +37,10 @@ public class AuthServiceImpl implements AuthService {
 
         String token = UUID.randomUUID().toString();
 
-        redisTemplate.opsForValue().set(token, user, expireTime, TimeUnit.MILLISECONDS);
+        redisTemplate.opsForValue().set(token, user, expireTime, TimeUnit.SECONDS);
         return AuthResponse
                 .builder()
-                .token(token)
+                .token(AppConstants.BEARER_TOKEN_TYPE + token)
                 .fullName(user.getFullName())
                 .username(user.getUsername())
                 .authorities(user.getAuthorities().stream().map(String::valueOf).collect(Collectors.toList())).build();
